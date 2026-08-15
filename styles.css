@@ -406,85 +406,36 @@ dialog input { width: 100%; margin-bottom: 8px; padding: 12px; border: 1px solid
   dialog {
     padding: 30px 24px;
   }
-  /* Keep the footer at the bottom of short pages */
-  html {
-    min-height: 100%;
-  }
-  
-  body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-  
-  main {
-    flex: 1;
-  }
-  
-  /* Make all resource cards equal-height columns */
-  .resource-grid {
-    align-items: stretch;
-  }
-  
-  .resource-card {
-    display: flex;
-    height: 100%;
-    flex-direction: column;
-  }
-  
-  /* Stack resource buttons vertically */
-  .resource-links {
-    display: grid;
-    grid-template-columns: 1fr;
-    align-content: start;
-    gap: 10px;
-    margin-top: auto;
-    padding-top: 22px;
-  }
-  
-  /* Reset the old spacing on links inside the button area */
-  .resource-links .resource-action {
-    margin-top: 0;
-  }
-  
-  /* Give every resource link the same button appearance and height */
-  .resource-links a {
-    display: flex;
-    width: 100%;
-    min-height: 42px;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 10px 12px;
-    color: var(--blue);
-    border: 1px solid rgba(11, 47, 101, 0.45);
-    border-radius: 3px;
-    background: var(--white);
-    font-size: 0.8rem;
-    font-weight: 800;
-    line-height: 1.2;
-    text-decoration: none;
-    text-transform: none;
-    letter-spacing: normal;
-    transition:
-      color 0.2s ease,
-      border-color 0.2s ease,
-      background 0.2s ease;
-  }
-  
-  .resource-links a:hover,
-  .resource-links a:focus-visible {
-    color: var(--white);
-    border-color: var(--blue);
-    background: var(--blue);
-  }
-  
-  /* Reserve three matching button rows on larger screens */
-@media (min-width: 601px) {
-  .resource-grid .resource-links {
-    min-height: 146px;
-  }
-  }
-  .resource-links {
+}
+
+/* Keep the footer at the bottom of short pages */
+html {
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Keep all resource cards equal in height */
+.resource-grid {
+  align-items: stretch;
+}
+
+.resource-grid .resource-card {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+
+/* Stack resource links vertically */
+.resource-grid .resource-links {
   display: flex !important;
   flex-direction: column !important;
   flex-wrap: nowrap !important;
@@ -493,13 +444,44 @@ dialog input { width: 100%; margin-bottom: 8px; padding: 12px; border: 1px solid
   width: 100%;
   margin-top: auto;
   padding-top: 22px;
-  }
-  
-  .resource-links a {
-    display: flex;
-    width: 100%;
-    min-height: 42px;
-    align-items: center;
-    justify-content: flex-start;
+}
+
+/* Give every resource link the same button size and appearance */
+.resource-grid .resource-links a,
+.resource-grid .resource-links .resource-action {
+  display: flex;
+  width: 100%;
+  min-height: 42px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 0;
+  padding: 10px 12px;
+  color: var(--blue);
+  border: 1px solid rgba(11, 47, 101, 0.45);
+  border-radius: 3px;
+  background: var(--white);
+  font-size: 0.8rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-decoration: none;
+  text-transform: none;
+  letter-spacing: normal;
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.resource-grid .resource-links a:hover,
+.resource-grid .resource-links a:focus-visible {
+  color: var(--white);
+  border-color: var(--blue);
+  background: var(--blue);
+}
+
+/* Align button areas when cards sit beside one another */
+@media (min-width: 601px) {
+  .resource-grid .resource-links {
+    min-height: 146px;
   }
 }
