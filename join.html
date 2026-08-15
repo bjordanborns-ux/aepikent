@@ -46,6 +46,23 @@
           <div><p class="eyebrow dark">Recruitment</p><h2>Find your place at Kent State.</h2></div>
           <p>Rush is free, casual, and open to any Kent State man of good character. No Greek-life experience required.</p>
         </div>
+        <div class="rush-schedule" aria-labelledby="rush-schedule-title">
+          <div class="rush-poster-wrap">
+            <img class="rush-poster" src="assets/fall-rush-2026.jpeg" width="1152" height="1536" loading="lazy" decoding="async" alt="Alpha Epsilon Pi Fall Rush 2026 schedule" />
+          </div>
+          <div>
+            <p class="eyebrow dark">Fall 2026</p>
+            <h2 id="rush-schedule-title">Upcoming recruitment events</h2>
+            <p class="schedule-intro">Come as you are, meet the brothers, and see what Phi Deuteron is about. Add any public event directly to your calendar.</p>
+            <div class="event-list">
+              <article class="event-card"><time datetime="2026-08-24T18:00:00-04:00"><strong>Aug 24</strong><span>6:00 PM</span></time><div><h3>Open House</h3><p>319 E Summit St., Kent, OH</p><a class="calendar-button" href="calendar/open-house.ics" download>Add to Calendar</a></div></article>
+              <article class="event-card"><time datetime="2026-08-28T19:00:00-04:00"><strong>Aug 28</strong><span>7:00 PM</span></time><div><h3>Grill Night</h3><p>319 E Summit St., Kent, OH</p><a class="calendar-button" href="calendar/grill-night.ics" download>Add to Calendar</a></div></article>
+              <article class="event-card"><time datetime="2026-08-30T14:00:00-04:00"><strong>Aug 30</strong><span>2:00 PM</span></time><div><h3>Volleyball</h3><p>Tri-Towers at Kent State</p><a class="calendar-button" href="calendar/volleyball.ics" download>Add to Calendar</a></div></article>
+              <article class="event-card"><time datetime="2026-09-01T18:00:00-04:00"><strong>Sep 1</strong><span>6:00 PM</span></time><div><h3>Cornhole Tournament</h3><p>319 E Summit St., Kent, OH</p><a class="calendar-button" href="calendar/cornhole-tournament.ics" download>Add to Calendar</a></div></article>
+              <article class="event-card invite-event"><time datetime="2026-09-04"><strong>Sep 4</strong><span>Time TBA</span></time><div><h3>Invite Only</h3><p>Details will be shared directly with invited guests.</p><span class="calendar-button disabled" aria-label="Calendar details unavailable until time is announced">Time TBA</span></div></article>
+            </div>
+          </div>
+        </div>
         <div class="join-layout">
           <img class="portrait-image" src="assets/delegation.jpeg" width="1536" height="2048" loading="lazy" decoding="async" alt="Kent State Alpha Epsilon Pi Phi Deuteron delegates at fraternity convention" />
           <ol class="steps">
@@ -59,7 +76,24 @@
 
       <section class="photo-banner">
         <img src="assets/brothers.jpeg" width="2200" height="1511" loading="lazy" decoding="async" alt="Alpha Epsilon Pi fraternity brothers from Kent State University at a chapter event" />
-        <div><p class="eyebrow">Fall recruitment</p><h2>Come meet the chapter.</h2><a class="button gold" href="mailto:exec@aepikent.org?subject=AEPi%20Recruitment">Contact recruitment</a></div>
+        <div><p class="eyebrow">Fall recruitment</p><h2>Come meet the chapter.</h2></div>
+      </section>
+
+      <section class="interest-section section" id="interest-form-section">
+        <div class="page-width interest-layout">
+          <div class="interest-copy"><p class="eyebrow dark">Interested in AEPi?</p><h2>Start the conversation.</h2><p>Tell us a little about yourself. Submitting this form opens a prepared email in your device’s mail app so you can review and send it to chapter leadership.</p><p>Prefer regular email? <a class="inline-link" href="mailto:exec@aepikent.org?subject=AEPi%20Recruitment%20Interest">Email exec@aepikent.org</a>.</p></div>
+          <form class="interest-form" id="recruitment-interest-form">
+            <div class="form-field"><label for="interest-name">Name</label><input id="interest-name" name="name" type="text" autocomplete="name" required /></div>
+            <div class="form-field"><label for="interest-email">Kent State email</label><input id="interest-email" name="email" type="email" autocomplete="email" placeholder="name@kent.edu" pattern=".+@kent\.edu" title="Please use your @kent.edu email address" required /></div>
+            <div class="form-row">
+              <div class="form-field"><label for="interest-year">Class year</label><select id="interest-year" name="classYear" required><option value="">Select year</option><option>First year</option><option>Sophomore</option><option>Junior</option><option>Senior</option><option>Graduate student</option></select></div>
+              <div class="form-field"><label for="interest-major">Major</label><input id="interest-major" name="major" type="text" required /></div>
+            </div>
+            <div class="form-field"><label for="interest-contact">Phone or Instagram</label><input id="interest-contact" name="contact" type="text" autocomplete="tel" required /></div>
+            <div class="form-field"><label for="interest-source">How did you hear about AEPi?</label><select id="interest-source" name="source" required><option value="">Choose one</option><option>Friend or current brother</option><option>Instagram or social media</option><option>Kent State event</option><option>Chapter house or rush event</option><option>Search engine</option><option>Other</option></select></div>
+            <button class="button navy" type="submit">Prepare recruitment email</button>
+          </form>
+        </div>
       </section>
 
     </main>
@@ -70,6 +104,23 @@
       const nav = document.querySelector("#site-nav");
       menuButton.addEventListener("click", () => { const open = nav.classList.toggle("open"); menuButton.setAttribute("aria-expanded", String(open)); });
       nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => nav.classList.remove("open")));
+      document.querySelector("#recruitment-interest-form").addEventListener("submit", (event) => {
+        event.preventDefault();
+        const data = new FormData(event.currentTarget);
+        const name = data.get("name");
+        const subject = `AEPi Recruitment Interest - ${name}`;
+        const body = [
+          "AEPi Recruitment Interest",
+          "",
+          `Name: ${name}`,
+          `Kent State email: ${data.get("email")}`,
+          `Class year: ${data.get("classYear")}`,
+          `Major: ${data.get("major")}`,
+          `Phone or Instagram: ${data.get("contact")}`,
+          `How they heard about AEPi: ${data.get("source")}`
+        ].join("\n");
+        window.location.href = `mailto:exec@aepikent.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      });
       document.querySelector("#year").textContent = new Date().getFullYear();
     </script>
   </body>
