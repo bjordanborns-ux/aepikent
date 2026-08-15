@@ -194,27 +194,145 @@ dialog input { width: 100%; margin-bottom: 8px; padding: 12px; border: 1px solid
 }
 
 @media (max-width: 600px) {
-  .page-width { width: min(100% - 28px, var(--width)); }
-  .section { padding-block: 70px; }
-  .brand small { display: none; }
-  .brand img { width: 44px; height: 44px; }
-  .header-actions { margin-left: 10px; }
-  .hero { min-height: 650px; }
-  .hero-content { padding-block: 65px; }
-  .hero-logo { width: 90px; }
-  .hero h1 { font-size: clamp(3rem, 15vw, 4.6rem); }
-  .stats { width: calc(100% - 28px); }
-  .stats article { padding: 20px; }
-  .card-grid.four, .card-grid.three { grid-template-columns: 1fr; }
-  .split, .join-layout { gap: 38px; }
-  .history-timeline::before { left: 7px; }
-  .history-entry { grid-template-columns: 1fr; gap: 8px; padding-left: 34px; }
-  .history-entry::before { left: 0; }
-  .history-entry time { text-align: left; }
-  .fleischer-memorial { grid-template-columns: 1fr; padding: 30px 24px; }
-  .photo-banner { min-height: 390px; }
-  .calendar-panel { padding: 14px; }
-  .resource-heading { align-items: flex-start; flex-direction: column; gap: 10px; }
-  .chapter-calendar { min-height: 460px; }
-  dialog { padding: 30px 24px; }
+  .page-width {
+    width: min(100% - 28px, var(--width));
+  }
+
+  /* Header */
+  .brand small {
+    display: none;
+  }
+
+  .brand img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .header-actions {
+    margin-left: 10px;
+  }
+
+  /* Subpage headings */
+  .page-banner {
+    padding-block: 38px;
+  }
+
+  .page-banner h1 {
+    font-size: clamp(2.3rem, 11vw, 3.4rem);
+  }
+
+  /* General section spacing */
+  .section {
+    padding-block: 46px;
+  }
+
+  .section-heading {
+    gap: 16px;
+  }
+
+  .section-heading h2,
+  .section-heading > p {
+    margin-bottom: 0;
+  }
+
+  /* Homepage hero */
+  .hero {
+    min-height: 650px;
+  }
+
+  .hero-content {
+    padding-block: 65px;
+  }
+
+  .hero-logo {
+    width: 90px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 15vw, 4.6rem);
+  }
+
+  /* Chapter statistics */
+  .stats {
+    width: calc(100% - 28px);
+  }
+
+  .stats article {
+    padding: 20px;
+  }
+
+  /* Cards */
+  .card-grid {
+    gap: 14px;
+    margin-top: 28px;
+  }
+
+  .card-grid.four,
+  .card-grid.three {
+    grid-template-columns: 1fr;
+  }
+
+  /* Split layouts and recruitment */
+  .split,
+  .join-layout {
+    gap: 30px;
+  }
+
+  .join-layout {
+    margin-top: 32px;
+  }
+
+  /* Chapter history */
+  .history-timeline::before {
+    left: 7px;
+  }
+
+  .history-entry {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding-left: 34px;
+  }
+
+  .history-entry::before {
+    left: 0;
+  }
+
+  .history-entry time {
+    text-align: left;
+  }
+
+  .fleischer-memorial {
+    grid-template-columns: 1fr;
+    padding: 30px 24px;
+  }
+
+  /* FAQ */
+  .faq-list {
+    margin-top: 28px;
+  }
+
+  /* Recruitment banner */
+  .photo-banner {
+    min-height: 390px;
+  }
+
+  /* Brother resources */
+  .calendar-panel {
+    padding: 14px;
+  }
+
+  .resource-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .chapter-calendar {
+    min-height: 460px;
+  }
+
+  /* Password dialog */
+  dialog {
+    padding: 30px 24px;
+  }
 }
