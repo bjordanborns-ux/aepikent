@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEPi Kent//Fall Rush 2026//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:20260828-grill-night@aepikent.org
+DTSTAMP:20260815T000000Z
+DTSTART;TZID=America/New_York:20260828T190000
+SUMMARY:AEPi Kent Fall Rush - Grill Night
+LOCATION:319 E Summit St\, Kent\, OH 44240
+DESCRIPTION:Join Alpha Epsilon Pi at Kent State for Fall Rush Grill Night.
+URL:https://aepikent.org/join.html
+END:VEVENT
+END:VCALENDAR

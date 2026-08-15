@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEPi Kent//Fall Rush 2026//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:20260830-volleyball@aepikent.org
+DTSTAMP:20260815T000000Z
+DTSTART;TZID=America/New_York:20260830T140000
+SUMMARY:AEPi Kent Fall Rush - Volleyball
+LOCATION:Tri-Towers\, Kent State University
+DESCRIPTION:Join Alpha Epsilon Pi at Kent State for Fall Rush volleyball.
+URL:https://aepikent.org/join.html
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AEPi Kent//Fall Rush 2026//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:20260824-open-house@aepikent.org
+DTSTAMP:20260815T000000Z
+DTSTART;TZID=America/New_York:20260824T180000
+SUMMARY:AEPi Kent Fall Rush - Open House
+LOCATION:319 E Summit St\, Kent\, OH 44240
+DESCRIPTION:Meet the brothers of Alpha Epsilon Pi's Phi Deuteron Chapter at Kent State.
+URL:https://aepikent.org/join.html
+END:VEVENT
+END:VCALENDAR
