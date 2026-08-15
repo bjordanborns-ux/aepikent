@@ -94,7 +94,7 @@ h3 { margin-bottom: 10px; font-size: 1.35rem; }
 .button.outline { color: var(--white); border: 1px solid rgba(255,255,255,.5); background: rgba(255,255,255,.05); }
 .button.navy { width: 100%; color: var(--white); background: var(--navy); }
 
-.stats { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(4, 1fr); margin-top: -42px; border: 1px solid var(--line); background: var(--white); box-shadow: var(--shadow); }
+.stats { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(4, 1fr); margin-top: -42px; border: 1px solid var(--line); background: #ffffff; box-shadow: var(--shadow); }
 .stats article { padding: 28px; border-right: 1px solid var(--line); }
 .stats article:last-child { border: 0; }
 .stats strong, .stats span { display: block; }
