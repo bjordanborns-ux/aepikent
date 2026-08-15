@@ -256,7 +256,7 @@ h3 { margin-bottom: 10px; font-size: 1.35rem; }
 }
 .alumni-events-note { margin: 22px 0 0; color: #8a6611; font-family: 'Montserrat', sans-serif; font-weight: 800; }
 .faq-list { display: grid; gap: 14px; margin-top: 42px; }
-.faq-list details { padding: 22px 24px; border: 1px solid var(--line); border-radius: 4px; background: var(--white); box-shadow: 0 8px 24px rgba(6,26,58,.05); }
+.faq-list details { padding: 22px 24px; border: 1px solid var(--line); border-radius: 4px; background: #ffffff; box-shadow: 0 8px 24px rgba(6,26,58,.05); }
 .faq-list summary { color: var(--navy); font-family: 'Montserrat', sans-serif; font-size: 1.08rem; font-weight: 800; cursor: pointer; }
 .faq-list details p { margin: 16px 0 0; color: var(--muted); }
 .text-link { color: var(--blue); font-weight: 800; text-decoration: none; }
