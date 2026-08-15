@@ -485,3 +485,12 @@ main {
     min-height: 146px;
   }
 }
+
+/* Keep page backgrounds white on every screen size */
+body,
+main,
+.history,
+.alumni,
+.values {
+  background-color: #ffffff !important;
+}
