@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Join AEPi at Kent State | Recruitment</title>
+    <meta name="description" content="Learn how to join Alpha Epsilon Pi’s Phi Deuteron Chapter at Kent State University." />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://aepikent.org/join.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Alpha Epsilon Pi at Kent State University" />
+    <meta property="og:title" content="Join AEPi at Kent State | Recruitment" />
+    <meta property="og:description" content="Learn how to join Alpha Epsilon Pi’s Phi Deuteron Chapter at Kent State University." />
+    <meta property="og:url" content="https://aepikent.org/join.html" />
+    <meta property="og:image" content="https://aepikent.org/assets/convention-group.jpeg" />
+    <meta name="theme-color" content="#061a3a" />
+    <link rel="icon" href="favicon.png" type="image/png" sizes="64x64" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Alpha Epsilon Pi home">
+        <img src="assets/logo.png" width="600" height="600" alt="Alpha Epsilon Pi Phi Deuteron Chapter logo" />
+        <span><strong>Alpha Epsilon Pi</strong><small>Phi Deuteron · Kent State</small></span>
+      </a>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="about.html">About</a>
+        <a href="history.html">History</a>
+        <a href="values.html">Values</a>
+        <a href="join.html">Join</a>
+        <a href="faq.html">FAQ</a>
+        <a href="families.html">Families</a>
+        <a href="alumni.html">Alumni</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="brother-button" href="index.html?members=open" aria-label="Brother resources" title="Brother resources"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C12 7.52 16.48 12 22 12C16.48 12 12 16.48 12 22C12 16.48 7.52 12 2 12C7.52 12 12 7.52 12 2Z" /></svg></a>
+        <button class="menu-button" id="menu-button" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </header>
+    <main>
+      <section class="page-banner"><div class="page-width"><p class="eyebrow">Recruitment</p><h1>Join Alpha Epsilon Pi</h1></div></section>
+      <section class="section page-width" id="join">
+        <div class="section-heading">
+          <div><p class="eyebrow dark">Recruitment</p><h2>Find your place at Kent State.</h2></div>
+          <p>Rush is free, casual, and open to any Kent State man of good character. No Greek-life experience required.</p>
+        </div>
+        <div class="join-layout">
+          <img class="portrait-image" src="assets/delegation.jpeg" width="1536" height="2048" loading="lazy" decoding="async" alt="Kent State Alpha Epsilon Pi Phi Deuteron delegates at fraternity convention" />
+          <ol class="steps">
+            <li><span>01</span><div><h3>Come to an event</h3><p>Join us for a rush event. Our schedule can be found on <a class="inline-link" href="https://instagram.com/aepikent" target="_blank" rel="noopener noreferrer">our Instagram</a>.</p></div></li>
+            <li><span>02</span><div><h3>Meet the brothers</h3><p>Ask real questions and get to know the people behind the letters.</p></div></li>
+            <li><span>03</span><div><h3>Talk with leadership</h3><p>Discuss academics, time, dues, expectations, and what you want from brotherhood.</p></div></li>
+            <li><span>04</span><div><h3>Receive a bid</h3><p>If it is a mutual fit, you will be invited to begin our new-member education process.</p></div></li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="photo-banner">
+        <img src="assets/brothers.jpeg" width="2200" height="1511" loading="lazy" decoding="async" alt="Alpha Epsilon Pi fraternity brothers from Kent State University at a chapter event" />
+        <div><p class="eyebrow">Fall recruitment</p><h2>Come meet the chapter.</h2><a class="button gold" href="mailto:exec@aepikent.org?subject=AEPi%20Recruitment">Contact recruitment</a></div>
+      </section>
+
+    </main>
+    <footer><img src="assets/logo.png" width="600" height="600" alt="" /><p>© <span id="year"></span> Alpha Epsilon Pi, Phi Deuteron Chapter · Kent State University</p></footer>
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "705a6dcdab874d5dbcde9c05819da363"}'></script><!-- End Cloudflare Web Analytics -->
+    <script>
+      const menuButton = document.querySelector("#menu-button");
+      const nav = document.querySelector("#site-nav");
+      menuButton.addEventListener("click", () => { const open = nav.classList.toggle("open"); menuButton.setAttribute("aria-expanded", String(open)); });
+      nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => nav.classList.remove("open")));
+      document.querySelector("#year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

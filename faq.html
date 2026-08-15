@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Frequently Asked Questions | AEPi Kent</title>
+    <meta name="description" content="Answers about recruitment, membership, and Alpha Epsilon Pi at Kent State." />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://aepikent.org/faq.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Alpha Epsilon Pi at Kent State University" />
+    <meta property="og:title" content="Frequently Asked Questions | AEPi Kent" />
+    <meta property="og:description" content="Answers about recruitment, membership, and Alpha Epsilon Pi at Kent State." />
+    <meta property="og:url" content="https://aepikent.org/faq.html" />
+    <meta property="og:image" content="https://aepikent.org/assets/convention-group.jpeg" />
+    <meta name="theme-color" content="#061a3a" />
+    <link rel="icon" href="favicon.png" type="image/png" sizes="64x64" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Who can join Alpha Epsilon Pi at Kent State?", "acceptedAnswer": { "@type": "Answer", "text": "Rush is open to any Kent State man of good character who shares the chapter’s values, regardless of religion." } },
+          { "@type": "Question", "name": "Where is the AEPi chapter house in Kent, Ohio?", "acceptedAnswer": { "@type": "Answer", "text": "The Phi Deuteron chapter house is located at 319 E Summit St, Kent, Ohio 44240, near Kent State University." } },
+          { "@type": "Question", "name": "How do I rush AEPi at Kent State?", "acceptedAnswer": { "@type": "Answer", "text": "Attend a casual rush event, meet the brothers, speak with chapter leadership, and follow @aepikent on Instagram for the current recruitment schedule." } }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Alpha Epsilon Pi home">
+        <img src="assets/logo.png" width="600" height="600" alt="Alpha Epsilon Pi Phi Deuteron Chapter logo" />
+        <span><strong>Alpha Epsilon Pi</strong><small>Phi Deuteron · Kent State</small></span>
+      </a>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="about.html">About</a>
+        <a href="history.html">History</a>
+        <a href="values.html">Values</a>
+        <a href="join.html">Join</a>
+        <a href="faq.html">FAQ</a>
+        <a href="families.html">Families</a>
+        <a href="alumni.html">Alumni</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="brother-button" href="index.html?members=open" aria-label="Brother resources" title="Brother resources"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C12 7.52 16.48 12 22 12C16.48 12 12 16.48 12 22C12 16.48 7.52 12 2 12C7.52 12 12 7.52 12 2Z" /></svg></a>
+        <button class="menu-button" id="menu-button" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </header>
+    <main>
+      <section class="page-banner"><div class="page-width"><p class="eyebrow">Questions and answers</p><h1>Frequently asked questions</h1></div></section>
+      <section class="faq section page-width" id="faq">
+        <div class="section-heading">
+          <div><p class="eyebrow dark">Frequently asked questions</p><h2>Fraternity life at Kent State</h2></div>
+          <p>Quick answers for students and families exploring Alpha Epsilon Pi and Greek life in Kent, Ohio.</p>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Who can join Alpha Epsilon Pi at Kent State?</summary>
+            <p>Rush is open to any Kent State man of good character who shares our values. AEPi is proudly the Jewish fraternity, and membership is open regardless of religion.</p>
+          </details>
+          <details>
+            <summary>Where is the AEPi chapter house in Kent, Ohio?</summary>
+            <p>Our Phi Deuteron chapter house is at 319 E Summit St, Kent, OH 44240, near the Kent State University campus.</p>
+          </details>
+          <details>
+            <summary>How do I rush AEPi at Kent State?</summary>
+            <p>Come to a casual recruitment event, meet the brothers, and talk with chapter leadership. Follow <a class="inline-link" href="https://instagram.com/aepikent" target="_blank" rel="noopener noreferrer">@aepikent on Instagram</a> for the current rush schedule.</p>
+          </details>
+          <details>
+            <summary>What does the Phi Deuteron Chapter value?</summary>
+            <p>Our chapter centers brotherhood, leadership, service, academics, personal responsibility, and Jewish values while serving Kent State and the wider Kent community.</p>
+          </details>
+        </div>
+      </section>
+
+    </main>
+    <footer><img src="assets/logo.png" width="600" height="600" alt="" /><p>© <span id="year"></span> Alpha Epsilon Pi, Phi Deuteron Chapter · Kent State University</p></footer>
+    <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "705a6dcdab874d5dbcde9c05819da363"}'></script><!-- End Cloudflare Web Analytics -->
+    <script>
+      const menuButton = document.querySelector("#menu-button");
+      const nav = document.querySelector("#site-nav");
+      menuButton.addEventListener("click", () => { const open = nav.classList.toggle("open"); menuButton.setAttribute("aria-expanded", String(open)); });
+      nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => nav.classList.remove("open")));
+      document.querySelector("#year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
