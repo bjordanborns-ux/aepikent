@@ -312,7 +312,7 @@ dialog input { width: 100%; margin-bottom: 8px; padding: 12px; border: 1px solid
 
 @media (max-width: 600px) {
   .page-width {
-    width: min(100% - 28px, var(--width));
+    width: min(calc(100% - 28px), var(--width));
   }
 
   /* Header */
