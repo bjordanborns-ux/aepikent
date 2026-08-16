@@ -94,7 +94,7 @@ h3 { margin-bottom: 10px; font-size: 1.35rem; }
 .button.outline { color: var(--white); border: 1px solid rgba(255,255,255,.5); background: rgba(255,255,255,.05); }
 .button.navy { width: 100%; color: var(--white); background: var(--navy); }
 
-.stats { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(4, 1fr); margin-top: -42px; border: 1px solid var(--line); background: var(--white); box-shadow: var(--shadow); }
+.stats { position: relative; z-index: 2; display: grid; grid-template-columns: repeat(4, 1fr); margin-top: -42px; border: 1px solid var(--line); background: var(--surface); box-shadow: var(--shadow); }
 .stats article { padding: 28px; border-right: 1px solid var(--line); }
 .stats article:last-child { border: 0; }
 .stats strong, .stats span { display: block; }
@@ -204,7 +204,7 @@ h3 { margin-bottom: 10px; font-size: 1.35rem; }
 .photo-gallery figcaption span { color: rgba(255,255,255,.8); font-size: .78rem; }
 .alumni { background: transparent; }
 .faq-list { display: grid; gap: 14px; margin-top: 42px; }
-.faq-list details { padding: 22px 24px; border: 1px solid var(--line); border-radius: 4px; background: var(--white); box-shadow: 0 8px 24px rgba(6,26,58,.05); }
+.faq-list details { padding: 22px 24px; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); box-shadow: 0 8px 24px rgba(6,26,58,.05); }
 .faq-list summary { color: var(--navy); font-family: 'Montserrat', sans-serif; font-size: 1.08rem; font-weight: 800; cursor: pointer; }
 .faq-list details p { margin: 16px 0 0; color: var(--muted); }
 .text-link { color: var(--blue); font-weight: 800; text-decoration: none; }
