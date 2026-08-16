@@ -663,3 +663,12 @@ main {
     min-height: 146px;
   }
 }
+.contact-page-main {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.contact-page-main #contact {
+  margin-top: auto;
+}
