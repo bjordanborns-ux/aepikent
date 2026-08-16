@@ -265,7 +265,7 @@ h3 { margin-bottom: 10px; font-size: 1.35rem; }
 .alumni-event-card p { margin-bottom: 3px; color: var(--muted); }
 .alumni-event-card address { margin-bottom: 18px; color: var(--muted); font-size: .9rem; font-style: normal; }
 .alumni-calendar-button { width: fit-content; }
-.alumni-events-note { margin: 22px 0 0; color: var(--muted); font-weight: 700; }
+.alumni-events-note { margin: 22px 0 0; color: var(--gold); font-weight: 700; }
 
 .contact { color: var(--white); background: var(--navy); }
 .contact h2 { max-width: 520px; color: var(--white); }
