@@ -211,6 +211,59 @@ h3 { margin-bottom: 10px; font-size: 1.35rem; }
 .inline-link { color: var(--blue); font-weight: 800; text-underline-offset: 3px; }
 .inline-link:hover { color: #9a7110; }
 
+.chapter-leadership { background: transparent; }
+.leadership-heading { max-width: 780px; }
+.leadership-heading > p:last-child { margin-bottom: 0; color: var(--muted); font-size: 1.02rem; }
+.leadership-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin-top: 42px; }
+.leadership-card { padding: 34px; border: 1px solid var(--line); border-top: 5px solid var(--gold); border-radius: 4px; background: var(--surface); box-shadow: 0 8px 24px rgba(6,26,58,.06); }
+.leadership-role { display: block; margin-bottom: 8px; color: #9a7110; font-size: .74rem; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+.leadership-card h3 { margin-bottom: 24px; color: var(--navy); font-size: 1.65rem; }
+.leadership-details { display: grid; gap: 0; margin: 0; }
+.leadership-details > div { display: grid; grid-template-columns: 82px 1fr; gap: 16px; padding: 13px 0; border-bottom: 1px solid var(--line); }
+.leadership-details dt { color: var(--muted); font-size: .78rem; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
+.leadership-details dd { margin: 0; color: var(--ink); font-weight: 700; }
+.leadership-details a { color: var(--blue); text-underline-offset: 3px; }
+.leadership-why { margin-top: 24px; padding: 22px; border-left: 3px solid var(--gold); background: var(--paper); }
+.leadership-why h4 { margin: 0 0 8px; color: var(--navy); font-family: 'Montserrat', sans-serif; font-size: .9rem; }
+.leadership-why p { margin: 0; color: var(--muted); font-size: .92rem; }
+
+.family-heading { max-width: 780px; }
+.family-heading > p:last-child { margin-bottom: 0; color: var(--muted); font-size: 1.02rem; }
+.family-expectations { background: #eef2f6; }
+.family-split { display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: 70px; }
+.family-checklist { padding: 34px; border: 1px solid var(--line); border-top: 5px solid var(--gold); border-radius: 4px; background: var(--surface); box-shadow: var(--shadow); }
+.family-checklist h3 { margin-bottom: 20px; color: var(--navy); }
+.family-checklist ul { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+.family-checklist li { position: relative; padding: 15px 0 15px 28px; color: var(--muted); border-bottom: 1px solid var(--line); }
+.family-checklist li:last-child { padding-bottom: 0; border-bottom: 0; }
+.family-checklist li::before { content: ""; position: absolute; top: 23px; left: 2px; width: 9px; height: 9px; border-radius: 50%; background: var(--gold); }
+.family-resource-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin-top: 42px; }
+.family-resource-card { display: flex; min-width: 0; flex-direction: column; padding: 30px; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); box-shadow: 0 8px 24px rgba(6,26,58,.06); }
+.resource-source { display: block; min-height: 2.4em; margin-bottom: 20px; color: #9a7110; font-size: .7rem; font-weight: 800; letter-spacing: .1em; line-height: 1.4; text-transform: uppercase; }
+.family-resource-card h3 { color: var(--navy); }
+.family-resource-card p { margin-bottom: 24px; color: var(--muted); font-size: .92rem; }
+.resource-card-link { margin-top: auto; color: var(--blue); font-size: .8rem; font-weight: 800; text-decoration: none; }
+.resource-card-link:hover { color: #9a7110; }
+.family-contact-band { padding-block: 72px; color: var(--white); background: var(--navy); }
+.family-contact-inner { display: flex; align-items: center; justify-content: space-between; gap: 50px; }
+.family-contact-inner > div { max-width: 720px; }
+.family-contact-inner h2 { margin-bottom: 14px; color: var(--white); }
+.family-contact-inner p:last-child { margin-bottom: 0; color: rgba(255,255,255,.8); }
+.family-contact-inner .button { flex: 0 0 auto; }
+
+.alumni-events-heading { max-width: 780px; }
+.alumni-events-heading > p:last-child { margin-bottom: 0; color: var(--muted); font-size: 1.02rem; }
+.alumni-event-list { display: grid; gap: 16px; margin-top: 42px; }
+.alumni-event-card { display: grid; grid-template-columns: 120px 1fr; gap: 28px; padding: 28px; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); box-shadow: 0 8px 24px rgba(6,26,58,.06); }
+.alumni-event-card time { display: flex; flex-direction: column; justify-content: center; padding-right: 24px; color: var(--blue); border-right: 1px solid var(--line); }
+.alumni-event-card time strong { font-family: 'Montserrat', sans-serif; font-size: 1.25rem; }
+.alumni-event-card time span { color: var(--muted); font-size: .8rem; }
+.alumni-event-card h3 { margin-bottom: 6px; color: var(--navy); }
+.alumni-event-card p { margin-bottom: 3px; color: var(--muted); }
+.alumni-event-card address { margin-bottom: 18px; color: var(--muted); font-size: .9rem; font-style: normal; }
+.alumni-calendar-button { width: fit-content; }
+.alumni-events-note { margin: 22px 0 0; color: var(--muted); font-weight: 700; }
+
 .contact { color: var(--white); background: var(--navy); }
 .contact h2 { max-width: 520px; color: var(--white); }
 .contact address { margin-bottom: 12px; font-style: normal; }
@@ -301,6 +354,10 @@ dialog input { width: 100%; margin-bottom: 8px; padding: 12px; border: 1px solid
   .stats article:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
   .split, .split.reverse, .section-heading, .join-layout, .contact-grid { grid-template-columns: 1fr; }
   .rush-schedule, .interest-layout { grid-template-columns: 1fr; }
+  .leadership-grid { grid-template-columns: 1fr; }
+  .family-split { grid-template-columns: 1fr; }
+  .family-resource-grid { grid-template-columns: 1fr; }
+  .family-contact-inner { align-items: flex-start; flex-direction: column; gap: 28px; }
   .rush-poster-wrap { width: min(100%, 520px); margin-inline: auto; }
   .photo-gallery { grid-template-columns: repeat(2, 1fr); }
   .fleischer-memorial { grid-template-columns: 110px 1fr; }
@@ -435,6 +492,48 @@ dialog input { width: 100%; margin-bottom: 8px; padding: 12px; border: 1px solid
   /* FAQ */
   .faq-list {
     margin-top: 28px;
+  }
+
+  .leadership-grid {
+    gap: 16px;
+    margin-top: 30px;
+  }
+
+  .leadership-card {
+    padding: 26px 20px;
+  }
+
+  .leadership-details > div {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+
+  .family-split {
+    gap: 30px;
+  }
+
+  .family-checklist,
+  .family-resource-card {
+    padding: 26px 20px;
+  }
+
+  .family-resource-grid {
+    gap: 14px;
+    margin-top: 30px;
+  }
+
+  .family-contact-band {
+    padding-block: 48px;
+  }
+
+  .alumni-event-card {
+    grid-template-columns: 76px 1fr;
+    gap: 14px;
+    padding: 18px 16px;
+  }
+
+  .alumni-event-card time {
+    padding-right: 12px;
   }
 
   /* Recruitment banner */
