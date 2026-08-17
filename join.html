@@ -92,18 +92,27 @@
 
       <section class="interest-section section" id="interest-form-section">
         <div class="page-width interest-layout">
-          <div class="interest-copy"><p class="eyebrow dark">Interested in AEPi?</p><h2>Start the conversation.</h2><p>Tell us a little about yourself. Submitting this form opens a prepared email in your device’s mail app so you can review and send it to chapter leadership.</p><p>Prefer regular email? <a class="inline-link" href="mailto:exec@aepikent.org?subject=AEPi%20Recruitment%20Interest">Email exec@aepikent.org</a>.</p></div>
-          <form class="interest-form" id="recruitment-interest-form">
-            <div class="form-field"><label for="interest-name">Name</label><input id="interest-name" name="name" type="text" autocomplete="name" required /></div>
-            <div class="form-field"><label for="interest-email">Kent State email</label><input id="interest-email" name="email" type="email" autocomplete="email" placeholder="name@kent.edu" pattern=".+@kent\.edu" title="Please use your @kent.edu email address" required /></div>
+          <div class="interest-copy"><p class="eyebrow dark">Interested in AEPi?</p><h2>Start the conversation.</h2><p>Tell us a little about yourself and submit your interest directly to chapter leadership. We’ll use the information only to follow up about Alpha Epsilon Pi recruitment.</p><p>Prefer regular email? <a class="inline-link" href="mailto:exec@aepikent.org?subject=AEPi%20Recruitment%20Interest">Email exec@aepikent.org</a>.</p></div>
+          <form class="interest-form" id="recruitment-interest-form" action="https://docs.google.com/forms/d/e/1FAIpQLSfq80RBXug_misZpE9vOMo9Bx8ZTKtFBLgci43qdlen1YMpZw/formResponse" method="post" target="google-form-response">
+            <div class="form-field"><label for="interest-name">Name</label><input id="interest-name" name="entry.1661715095" type="text" autocomplete="name" required /></div>
+            <div class="form-field"><label for="interest-email">Kent State email</label><input id="interest-email" name="entry.463544637" type="email" autocomplete="email" placeholder="name@kent.edu" pattern=".+@kent\.edu" title="Please use your @kent.edu email address" required /></div>
             <div class="form-row">
-              <div class="form-field"><label for="interest-year">Class year</label><select id="interest-year" name="classYear" required><option value="">Select year</option><option>First year</option><option>Sophomore</option><option>Junior</option><option>Senior</option><option>Graduate student</option></select></div>
-              <div class="form-field"><label for="interest-major">Major</label><input id="interest-major" name="major" type="text" required /></div>
+              <div class="form-field"><label for="interest-year">Class year</label><select id="interest-year" name="entry.1893430861" required><option value="">Select year</option><option>First year</option><option>Sophomore</option><option>Junior</option><option>Senior</option><option>Graduate student</option></select></div>
+              <div class="form-field"><label for="interest-major">Major</label><input id="interest-major" name="entry.2077502028" type="text" required /></div>
             </div>
-            <div class="form-field"><label for="interest-contact">Phone or Instagram</label><input id="interest-contact" name="contact" type="text" autocomplete="tel" required /></div>
-            <div class="form-field"><label for="interest-source">How did you hear about AEPi?</label><select id="interest-source" name="source" required><option value="">Choose one</option><option>Friend or current brother</option><option>Instagram or social media</option><option>Kent State event</option><option>Chapter house or rush event</option><option>Search engine</option><option>Other</option></select></div>
-            <button class="button navy" type="submit">Prepare recruitment email</button>
+            <div class="form-field"><label for="interest-contact">Phone or Instagram</label><input id="interest-contact" name="entry.2030727319" type="text" autocomplete="tel" required /></div>
+            <div class="form-field"><label for="interest-source">How did you hear about AEPi?</label><select id="interest-source" name="entry.847984125" required><option value="">Choose one</option><option>Friend or current brother</option><option>Instagram or social media</option><option>Kent State event</option><option>Chapter house or rush event</option><option>Search engine</option><option>Other</option></select></div>
+            <p class="form-privacy">Your responses are submitted through Google Forms. See our <a href="privacy.html">privacy page</a> for details.</p>
+            <button class="button navy" type="submit">Submit interest form</button>
           </form>
+          <section class="form-confirmation" id="recruitment-confirmation" tabindex="-1" hidden aria-live="polite">
+            <span class="confirmation-mark" aria-hidden="true">✓</span>
+            <p class="eyebrow dark">Submission received</p>
+            <h3>Thanks for reaching out.</h3>
+            <p>Your recruitment interest has been sent to Phi Deuteron’s chapter leadership. A brother will follow up using the contact information you provided.</p>
+            <a class="button navy" href="index.html">Return home</a>
+          </section>
+          <iframe class="form-response-frame" id="google-form-response" name="google-form-response" title="Recruitment form submission response" hidden></iframe>
         </div>
       </section>
 
@@ -116,22 +125,21 @@
       const nav = document.querySelector("#site-nav");
       menuButton.addEventListener("click", () => { const open = nav.classList.toggle("open"); menuButton.setAttribute("aria-expanded", String(open)); });
       nav.querySelectorAll("a").forEach((link) => link.addEventListener("click", () => nav.classList.remove("open")));
-      document.querySelector("#recruitment-interest-form").addEventListener("submit", (event) => {
-        event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        const name = data.get("name");
-        const subject = `AEPi Recruitment Interest - ${name}`;
-        const body = [
-          "AEPi Recruitment Interest",
-          "",
-          `Name: ${name}`,
-          `Kent State email: ${data.get("email")}`,
-          `Class year: ${data.get("classYear")}`,
-          `Major: ${data.get("major")}`,
-          `Phone or Instagram: ${data.get("contact")}`,
-          `How they heard about AEPi: ${data.get("source")}`
-        ].join("\n");
-        window.location.href = `mailto:exec@aepikent.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const recruitmentForm = document.querySelector("#recruitment-interest-form");
+      const responseFrame = document.querySelector("#google-form-response");
+      const confirmation = document.querySelector("#recruitment-confirmation");
+      let recruitmentSubmitted = false;
+      recruitmentForm.addEventListener("submit", () => {
+        recruitmentSubmitted = true;
+        const submitButton = recruitmentForm.querySelector('[type="submit"]');
+        submitButton.disabled = true;
+        submitButton.textContent = "Submitting…";
+      });
+      responseFrame.addEventListener("load", () => {
+        if (!recruitmentSubmitted) return;
+        recruitmentForm.hidden = true;
+        confirmation.hidden = false;
+        confirmation.focus();
       });
       document.querySelector("#year").textContent = new Date().getFullYear();
     </script>
