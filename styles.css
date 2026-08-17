@@ -241,6 +241,7 @@ h3 { margin-bottom: 10px; font-size: 1.35rem; }
 .interest-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 70px; align-items: start; }
 .interest-copy > p:not(.eyebrow) { color: var(--muted); }
 .interest-form { display: grid; gap: 18px; padding: 32px; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); box-shadow: var(--shadow); }
+.interest-form[hidden] { display: none; }
 .interest-form .button:disabled { opacity: .7; cursor: wait; }
 .form-privacy { margin: -2px 0 0; color: var(--muted); font-size: .76rem; }
 .form-privacy a { color: var(--blue); font-weight: 800; }
