@@ -228,7 +228,7 @@ h3 { margin-bottom: 10px; font-size: 1.35rem; }
 .calendar-button:hover { background: var(--navy); }
 .calendar-button.disabled { color: var(--muted); background: #eef2f6; cursor: not-allowed; }
 .portrait-image { width: 100%; max-height: 700px; border-radius: 4px; box-shadow: var(--shadow); object-fit: cover; object-position: center 45%; }
-.steps { margin: 0; padding: 24px; list-style: none; border-top: 1px solid rgba(6, 26, 58, 0.1); }
+.steps { margin: 0; padding: 24px; list-style: none; }
 .steps li { display: grid; grid-template-columns: 52px 1fr; gap: 20px; padding: 0 0 25px; margin-bottom: 25px; border-bottom: 1px solid var(--line); }
 .steps li > span { color: #a97c15; font-family:'Montserrat', sans-serif; font-size: 1.35rem; }
 .steps p { margin: 0; color: var(--muted); }
