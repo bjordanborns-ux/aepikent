@@ -217,7 +217,7 @@ h3 { margin-bottom: 10px; font-size: 1.35rem; }
 .rush-schedule { display: grid; grid-template-columns: .7fr 1.3fr; gap: 50px; align-items: start; margin-top: 58px; padding-top: 58px; border-top: 1px solid var(--line); }
 .rush-poster { width: 100%; border-radius: 4px; box-shadow: var(--shadow); }
 .schedule-intro { max-width: 700px; color: var(--muted); }
-.event-list { display: grid; gap: 12px; margin-top: 28px; }
+.event-list { display: grid; gap: 12px; margin-top: 28px; padding-bottom: 40px; }
 .event-card { display: grid; grid-template-columns: 100px 1fr; gap: 22px; padding: 20px; border: 1px solid var(--line); border-radius: 4px; background: var(--surface); box-shadow: 0 8px 24px rgba(6,26,58,.05); }
 .event-card time { display: flex; flex-direction: column; justify-content: center; padding-right: 18px; color: var(--blue); border-right: 1px solid var(--line); }
 .event-card time strong { font-family: 'Montserrat', sans-serif; font-size: 1.05rem; }
