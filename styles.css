@@ -101,7 +101,7 @@ h3 { margin-bottom: 10px; font-size: 1.35rem; }
 .stats strong { color: var(--blue); font-family:'Montserrat', sans-serif; font-size: 1.55rem; }
 .stats span { color: var(--muted); font-size: .78rem; }
 
-.home-story { margin-top: 54px; overflow: hidden; border-block: 1px solid rgba(6,26,58,.1); background: var(--paper); }
+.home-story { margin-top: 54px; overflow: hidden; border-block: 1px solid rgba(6,26,58,.1); background: var(--white); }
 .home-story-inner { display: grid; grid-template-columns: .92fr 1.08fr; align-items: center; gap: 72px; }
 .home-story-copy h2 { max-width: 620px; }
 .home-story-lede { max-width: 600px; margin-bottom: 38px; color: var(--muted); font-size: 1.05rem; }
